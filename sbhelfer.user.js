@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         SB-Bilder Originallink
+// @name         SB-Helfertool
 // @namespace    https://schwarzwaelder-bote.de
 // @version      1.2
 // @description  Kleines Tool für die Arbeit des Schwarzwälder Boten.
