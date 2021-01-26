@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SB-Bilder Originallink
 // @namespace    https://schwarzwaelder-bote.de
-// @version      1.0
+// @version      1.1
 // @description  Kleines Tool für die Arbeit des Schwarzwälder Boten.
 // @author       Jannik Nölke
 // @match        https://www.schwarzwaelder-bote.de/*
