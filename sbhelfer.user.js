@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         SB-Bilder Originallink
 // @namespace    https://schwarzwaelder-bote.de
-// @version      1.1
+// @version      1.2
 // @description  Kleines Tool für die Arbeit des Schwarzwälder Boten.
 // @author       Jannik Nölke
 // @match        https://www.schwarzwaelder-bote.de/*
+// @match        https://www.lahrer-zeitung.de/*
 // @grant        none
 // @updateURL    https://github.com/jannik0402/sbhelfer/raw/main/sbhelfer.user.js
 // @downloadURL  https://github.com/jannik0402/sbhelfer/raw/main/sbhelfer.user.js
@@ -19,12 +20,13 @@
 
     if (seitenurl.indexOf("original1024") > -1){
         window.location.href = seitenurl.replace("original1024","original");
-        window.location.href = seitenurl.replace("original700","original");
         console.log("Kleines Bild");
-    }else{
-	    console.log("Originalbild");
+    }
 
-        }
+    if (seitenurl.indexOf("original700") > -1){
+        window.location.href = seitenurl.replace("original1024","original");
+        console.log("Kleines Bild");
+    }
 
 
 
