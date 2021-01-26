@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         SB-Helfertool
 // @namespace    https://schwarzwaelder-bote.de
-// @version      1.2
-// @description  Kleines Tool für die Arbeit des Schwarzwälder Boten.
+// @version      1.3
+// @description  Kleines Tool für die Arbeit des Schwarzwälder Boten. Beim öffnen eines Bildes öffnet sich automatisch die Original-URL (ohne 1024 oder 700). Beim Klick von "L" auf der Seite, wird der relative Link in die Zwischenablage kopiert.
 // @author       Jannik Nölke
 // @match        https://www.schwarzwaelder-bote.de/*
 // @match        https://www.lahrer-zeitung.de/*
