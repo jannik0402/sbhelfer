@@ -12,33 +12,33 @@
 
 (function() {
     'use strict';
-
-    var seitenurl = window.location.toString();
-    console.log(seitenurl);
+	
+	document.addEventListener("keydown", Tastendruck );
+    	var seitenurl = window.location.toString();
 
 
     if (seitenurl.indexOf("original1024") > -1){
         window.location.href = seitenurl.replace("original1024","original");
         window.location.href = seitenurl.replace("original700","original");
         console.log("Kleines Bild");
-       }else{
-           console.log("Originalbild");
+    }else{
+	    console.log("Originalbild");
 
         }
 
-document.addEventListener("keydown", Tastendruck );
+
 
     function Tastendruck(evt) {
-	  let zeichen = String.fromCharCode(evt.charCode);
-    if(evt.keyCode == 76){
-        console.log('L Gedrückt')
-        let neuerlink = seitenurl.replace("https://www.schwarzwaelder-bote.de","");
-        if(neuerlink != "/"){
-            copy2Clipboard(neuerlink)
-            alert(neuerlink + "\n\nIn die Zwischenablage kopiert!");
-        }else{
-            alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEin relativer Link der Startseite macht doch nun wirklich keinen Sinn...\n\n");
-        }
+	let zeichen = String.fromCharCode(evt.charCode);
+   	if(evt.keyCode == 76){
+        	console.log('L Gedrückt')
+        	let neuerlink = seitenurl.replace("https://www.schwarzwaelder-bote.de","");
+        	if(neuerlink != "/"){
+            		copy2Clipboard(neuerlink)
+            		alert(neuerlink + "\n\nIn die Zwischenablage kopiert!");
+        	}else{
+            		alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEin relativer Link der Startseite macht doch nun wirklich keinen Sinn...\n\n");
+        	}
     }
   }
 
