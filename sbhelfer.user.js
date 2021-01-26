@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         SB-Bilder Originallink
 // @namespace    https://schwarzwaelder-bote.de
-// @version      1.2
+// @version      1.0
 // @description  Kleines Tool für die Arbeit des Schwarzwälder Boten.
 // @author       Jannik Nölke
 // @match        https://www.schwarzwaelder-bote.de/*
 // @grant        none
-// @updateURL    https://github.com/LSS-Manager/lss-manager-v3/raw/master/lssm-v3.user.js
+// @updateURL    https://github.com/jannik0402/sbhelfer/raw/main/sbhelfer.user.js
+// @downloadURL  https://github.com/jannik0402/sbhelfer/raw/main/sbhelfer.user.js
 // ==/UserScript==
 
 (function() {
