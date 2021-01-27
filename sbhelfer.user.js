@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SB-Helfertool
 // @namespace    https://schwarzwaelder-bote.de
-// @version      1.3.1
+// @version      1.3.2
 // @description  Kleines Tool für die Arbeit des Schwarzwälder Boten. Beim öffnen eines Bildes öffnet sich automatisch die Original-URL (ohne 1024 oder 700). Beim Klick von "L" auf der Seite, wird der relative Link in die Zwischenablage kopiert.
 // @author       Jannik Nölke
 // @match        https://www.schwarzwaelder-bote.de/*
@@ -42,8 +42,8 @@
 		neuerlink = neuerlink.replace("https://www.stuttgarter-zeitung.de","");
 		
         	if(neuerlink != "/"){
-            		if(window.confirm(neuerlink + "\n\nIn die Zwischenablage kopiert! ✅")){
-				copy2Clipboard(neuerlink)
+            		alert(neuerlink + "\n\nIn die Zwischenablage kopiert! ✅"));
+			copy2Clipboard(neuerlink)
 			}
         	}else{
             		alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEin relativer Link der Startseite macht doch nun wirklich keinen Sinn...\n\n");
