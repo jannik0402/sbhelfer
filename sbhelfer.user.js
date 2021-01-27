@@ -35,9 +35,11 @@
    	if(evt.keyCode == 76){
         	console.log('L Gedrückt')
         	let neuerlink = seitenurl.replace("https://www.schwarzwaelder-bote.de","");
+		neuerlink = neuerlink.replace("https://www.lahrer-zeitung.de","");
         	if(neuerlink != "/"){
-            		copy2Clipboard(neuerlink)
-            		alert(neuerlink + "\n\nIn die Zwischenablage kopiert!");
+            		if(window.confirm(neuerlink + "\n\nIn die Zwischenablage kopiert! ✅")){
+				copy2Clipboard(neuerlink)
+			}
         	}else{
             		alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEin relativer Link der Startseite macht doch nun wirklich keinen Sinn...\n\n");
         	}
