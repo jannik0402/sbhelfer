@@ -44,8 +44,8 @@
         window.location.href = seitenurl.replace("original900","original");
         console.log("Kleines Bild");
     }
-	
-	if(document.getElementByName("robots").Attribute("content").includes("noindex")){
+	var metas = document.getElementByName("robots");
+	if(metas[0].attributes[1].nodeValue.includes("noindex")){
 		alert("NOINDEX!");
 	}
 
