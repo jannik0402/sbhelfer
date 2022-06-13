@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SB-Helfertool
 // @namespace	 https://github.com/jannik0402/sbhelfer
-// @version      1.6.2
+// @version      1.6.3
 // @description  Kleines Tool für die Arbeit des Schwarzwälder Boten. Beim öffnen eines Bildes öffnet sich automatisch die Original-URL (ohne 1024 oder 700). Beim Klick von "L" auf der Seite, wird der relative Link in die Zwischenablage kopiert.
 // @author       Jannik Nölke
 // @match        https://www.schwarzwaelder-bote.de/*
@@ -45,7 +45,7 @@
         console.log("Kleines Bild");
     }
 	var metas = document.getElementsByName("robots");
-	var autor =  document.getElementsByClassName("article-details")[0].innerText;
+	var autor =  document.getElementsByClassName("article-details")[0].innerText.toString();
 	if(metas[0].attributes[1].nodeValue.toString().indexOf("noindex") > -1){
 	     if(autor.indexOf("dpa")  > -1){
 		document.getElementById("top-of-page").innerHTML += '<div style="position:fixed;z-index:9999;top:10px;right:10px;background-color:red;color:white;padding:3px;">NOINDEX | DPA</div>';
@@ -121,11 +121,31 @@
         	}else{
                 alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEine TaRü-Folie für die Startseite macht wohl wenig Sinn\n\n");
         	}}
+	    
+	    
+	    if(evt.keyCode == '51'){
+
+       		var metapropertys = getAllElementsWithAttribute('property');
+		    alert(metapropertys[0].attributes[0].nodeValue.toString() + ' | ' + metapropertys[0].attributes[1].nodeValue.toString())
+	    }
     
     
     }
   
-
+function getAllElementsWithAttribute(attribute)
+{
+  var matchingElements = [];
+  var allElements = document.getElementsByTagName('*');
+  for (var i = 0, n = allElements.length; i < n; i++)
+  {
+    if (allElements[i].getAttribute(attribute) !== null)
+    {
+      // Element exists with attribute. Add to array.
+      matchingElements.push(allElements[i]);
+    }
+  }
+  return matchingElements;
+}
 
     function copy2Clipboard(str) {
 	var ta = document.createElement('textarea');
