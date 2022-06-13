@@ -27,7 +27,12 @@
     }
 
     if (seitenurl.indexOf("original700") > -1){
-        window.location.href = seitenurl.replace("original1024","original");
+        window.location.href = seitenurl.replace("original700","original");
+        console.log("Kleines Bild");
+    }
+	
+    if (seitenurl.indexOf("original900") > -1){
+        window.location.href = seitenurl.replace("original900","original");
         console.log("Kleines Bild");
     }
 
