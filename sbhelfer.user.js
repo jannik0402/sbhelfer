@@ -9,7 +9,6 @@
 // @match        https://www.stuttgarter-zeitung.de/*
 // @match        https://www.stuttgarter-nachrichten.de/*
 // @grant        none
-// @icon	 https://janoe-media.de/wp-content/uploads/2021/01/cropped-NEU-Transparent-32x32.png
 // @updateURL    https://github.com/jannik0402/sbhelfer/raw/main/sbhelfer.user.js
 // @downloadURL  https://github.com/jannik0402/sbhelfer/raw/main/sbhelfer.user.js
 // ==/UserScript==
