@@ -47,9 +47,9 @@
 	var metas = document.getElementsByName("robots");
 	if(metas[0].attributes[1].nodeValue.toString().indexOf("noindex") > -1){
 		alert("NOINDEX!");
-		document.getElementById("top-of-page").innerHTML += '<div style="position:absolute;top:10px;right:10px;background-color:red;color:white;padding:3px;">NOINDEX</div>';
+		document.getElementById("top-of-page").innerHTML += '<div style="position:absolute;z-index:9999;top:10px;right:10px;background-color:red;color:white;padding:3px;">NOINDEX</div>';
 	}else{
-		document.getElementById("top-of-page").innerHTML += '<div style="position:absolute;top:10px;right:10px;background-color:green;color:white;padding:3px;">INDEX</div>';
+		document.getElementById("top-of-page").innerHTML += '<div style="position:absolute;z-index:9999;top:10px;right:10px;background-color:green;color:white;padding:3px;">INDEX</div>';
 	}
 
 
