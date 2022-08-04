@@ -49,6 +49,8 @@
 	if(metas[0].attributes[1].nodeValue.toString().indexOf("noindex") > -1){
 	     if(autor.indexOf("dpa")  > -1){
 		document.getElementById("top-of-page").innerHTML += '<div style="position:fixed;z-index:9999;top:10px;right:10px;background-color:red;color:white;padding:3px;">NOINDEX | DPA</div>';
+	     }else if(autor.indexOf("afp")  > -1){
+		document.getElementById("top-of-page").innerHTML += '<div style="position:fixed;z-index:9999;top:10px;right:10px;background-color:red;color:white;padding:3px;">NOINDEX | AFP</div>';
 	     }else{
 	        document.getElementById("top-of-page").innerHTML += '<div style="position:fixed;z-index:9999;top:10px;right:10px;background-color:red;color:white;padding:3px;">NOINDEX</div>';
 	     }
