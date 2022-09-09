@@ -63,6 +63,9 @@
 		}
 		
 	}
+	if(window.hre.includes('byPassDigCmsCache')){
+		document.getElementById("top-of-page").innerHTML += '<div style="position:fixed;z-index:9999;top:25px;right:10px;background-color:blue;color:white;padding:3px;">byPassDigCmsCache</div>';
+	}
 	
 
 
