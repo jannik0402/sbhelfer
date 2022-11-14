@@ -150,7 +150,7 @@
 	    }
     
 	    if (seitenurl.indexOf("cmsApp") > -1){
-        	document.getElementsByTagName('body').innerHTML += '<div id="sbtoolbar" style="position:absolute;bottom:0px;left:0px;z-index:9999">Testbutton</div>'
+        	document.getElementsByTagName('body')[0].innerHTML += '<div id="sbtoolbar" style="position:absolute;bottom:0px;left:0px;z-index:9999">Testbutton</div>'
     	    }
     
     }
