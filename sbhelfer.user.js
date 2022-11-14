@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SB-Helfertool
 // @namespace	 https://github.com/jannik0402/sbhelfer
-// @version      1.8.0
+// @version      1.8.1
 // @description  Kleines Tool für die Arbeit des Schwarzwälder Boten. Beim öffnen eines Bildes öffnet sich automatisch die Original-URL (ohne 1024 oder 700). Beim Klick von "L" auf der Seite, wird der relative Link in die Zwischenablage kopiert.
 // @author       Jannik Nölke
 // @match        https://www.schwarzwaelder-bote.de/*
@@ -150,7 +150,7 @@
 	    }
     
 	    if (seitenurl.indexOf("cmsApp") > -1){
-        	document.getElementById("isc_9").innerHTML += '<div style="position:absolute;bottom:0px;top:0px;z-index:9999">Testbutton</div>'
+        	document.getElementsByTagName('body').innerHTML += '<div id="sbtoolbar" style="position:absolute;bottom:0px;left:0px;z-index:9999">Testbutton</div>'
     	    }
     
     }
