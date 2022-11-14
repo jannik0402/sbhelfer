@@ -18,7 +18,7 @@
 // @match        https://www.np-coburg.de/*
 // @match        https://www.kurier.de/*
 // @match        https://www.verlagshaus-jaumann.de/*
-// @match	 https://cms.sirweb.de/cmsApp/start/*
+// @match	 https://cms.sirweb.de/*
 // @grant        none
 // @updateURL    https://github.com/jannik0402/sbhelfer/raw/main/sbhelfer.user.js
 // @downloadURL  https://github.com/jannik0402/sbhelfer/raw/main/sbhelfer.user.js
