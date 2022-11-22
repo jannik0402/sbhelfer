@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SB-Helfertool
 // @namespace	 https://github.com/jannik0402/sbhelfer
-// @version      1.8.2
+// @version      1.8.3
 // @description  Kleines Tool für die Arbeit des Schwarzwälder Boten. Beim öffnen eines Bildes öffnet sich automatisch die Original-URL (ohne 1024 oder 700). Beim Klick von "L" auf der Seite, wird der relative Link in die Zwischenablage kopiert.
 // @author       Jannik Nölke
 // @match        https://www.schwarzwaelder-bote.de/*
@@ -111,27 +111,9 @@
                 alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEin relativer Link der Startseite macht doch nun wirklich keinen Sinn...\n\n");
         	}}
     
-	
-	if(evt.keyCode == '51'){
-
-        let neuerlink = seitenurl;
-		
-		if(neuerlink.indexOf("?byPassDigCmsCache") > -1){
-			var bypass = neuerlink.indexOf("?byPassDigCmsCache");
-			neuerlink = neuerlink.substring(0,bypass);
-		}
-		
-        	if(neuerlink != "/" && neuerlink.includes("schwarzwaelder-bote")){
-			window.open('https://ongeto.schwabo.de/generatoren/ausgabe/design2/tarue.php?link=' + neuerlink);
-			
-        	}else if(neuerlink != "/" && neuerlink.includes("stuttgarter-nachrichten")){
-			window.open('https://ongeto.schwabo.de/generatoren/ausgabe/design2/tarue.php?r=git&link=' + neuerlink);
-		}else{
-                alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEine TaRü-Folie für die Startseite macht wohl wenig Sinn\n\n");
-        	}}
 	    
 	    
-	    if(evt.keyCode == '52'){
+	    if(evt.keyCode == '51'){
 
        		    var metapropertys = getAllElementsWithAttribute('property');
 		    let titel = metapropertys[0].attributes[1].nodeValue.toString();
@@ -149,10 +131,35 @@
 			document.getElementById("article-social-bar").style.display = 'none';
 	    }
     
-	    if (seitenurl.indexOf("cmsApp") > -1){
-        	document.getElementsByTagName('body')[0].innerHTML += '<div id="sbtoolbar" style="position:absolute;bottom:0px;left:0px;z-index:9999">Testbutton</div>'
-    	    }
-    
+	    if(evt.keyCode == '52'){
+
+        let neuerlink = seitenurl;
+		
+		if(neuerlink.indexOf("?byPassDigCmsCache") > -1){
+			var bypass = neuerlink.indexOf("?byPassDigCmsCache");
+			neuerlink = neuerlink.substring(0,bypass);
+		}
+		
+        	if(neuerlink != "/" && neuerlink.includes("schwarzwaelder-bote")){
+			window.open('https://ongeto.schwabo.de/generatoren/ausgabe/design2/tarue.php?link=' + neuerlink);
+		}else{
+                alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEine TaRü-Folie für die Startseite macht wohl wenig Sinn\n\n");
+        	}}
+	    
+	    if(evt.keyCode == '53'){
+
+        let neuerlink = seitenurl;
+		
+		if(neuerlink.indexOf("?byPassDigCmsCache") > -1){
+			var bypass = neuerlink.indexOf("?byPassDigCmsCache");
+			neuerlink = neuerlink.substring(0,bypass);
+		}
+		
+        	if(neuerlink != "/" && neuerlink.includes("schwarzwaelder-bote")){
+			window.open('https://ongeto.schwabo.de/generatoren/ausgabe/design2/linkinbio.php?link=' + neuerlink);
+		}else{
+                alert("\n\nDu bist ein echter Spaßvogel! 🤣🤣🤣 \n\nEine TaRü-Folie für die Startseite macht wohl wenig Sinn\n\n");
+        	}}
     }
   
 function getAllElementsWithAttribute(attribute)
